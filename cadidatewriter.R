@@ -51,7 +51,6 @@ for (g in 1:28){
 	data_distritos[[g]]<- fromJSON(path_diputados[g])
 }
 
-data <- fromJSON(D1)
 
 #sd1;	(1) Independientes
 #		(2) es Frente Amplio
@@ -73,6 +72,6 @@ for (f in 1:28){
 		}
 	}
 }
-lista_desarmada <- bind_rows(lista)##Desarmar la lista
+lista_desarmada <- plyr::ldply(lista, data.frame)##Desarmar la lista
 
 write.csv(lista_desarmada,"prueba.csv")
