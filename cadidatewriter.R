@@ -1,6 +1,6 @@
 library(jsonlite)
 library(dplyr)
-setwd("C:/Users/Gonzalo/Desktop/R-json")
+setwd("")
 
 #Distritos
 D01 <- "http://servelelecciones.cl/data/elecciones_diputados/computo/distritos/6001.json"
